@@ -150,6 +150,7 @@ main {
     display: flex;
     gap: 15px; /* Diminuído o espaçamento */
     margin-top: 40px;
+    flex-wrap: wrap; /* Adicionado para quebrar a linha em telas menores */
 }
 
 /* ESTILOS ATUALIZADOS PARA OS ÍCONES */
@@ -414,7 +415,7 @@ ESTILOS DA PÁGINA DE PROJETOS
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.3s ease;
-    align-self: center; /* Centraliza o botão */
+    align-self: center; 
     margin-top: 20px;
 }
 
@@ -458,4 +459,120 @@ ESTILOS DA PÁGINA DE PROJETOS
 
 .contact-social a:hover svg {
     fill: var(--accent-color);
+}
+
+/*
+========================================
+ESTILOS RESPONSIVOS
+========================================
+*/
+
+/* Telas médias (tablets) - até 768px */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    nav ul {
+        gap: 15px;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    main {
+        padding: 40px 25px;
+    }
+
+    #inicio, #sobre, #experiencia, #projetos, #contato {
+        padding: 60px 25px;
+    }
+
+    .intro-text h1, .about-title h2 {
+        font-size: 40px;
+    }
+
+    .intro-text h2 {
+        font-size: 22px;
+    }
+
+    .intro-text p, .about-text p, .card-description {
+        font-size: 17px;
+    }
+
+    .section-title {
+        font-size: 32px;
+    }
+
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Telas pequenas (celulares) - até 480px */
+@media (max-width: 480px) {
+    header {
+        padding: 20px 15px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    nav a {
+        padding: 8px 12px;
+    }
+
+    main {
+        padding: 30px 15px;
+    }
+
+    #inicio, #sobre, #experiencia, #projetos, #contato {
+        min-height: auto; /* Remove a altura mínima para se ajustar ao conteúdo */
+        padding: 50px 15px;
+    }
+
+    .intro-text h1, .about-title h2 {
+        font-size: 32px;
+    }
+
+    .intro-text h2 {
+        font-size: 18px;
+    }
+
+    .intro-text p, .about-text p, .card-description {
+        font-size: 16px;
+    }
+
+    .about-title {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .tech-icons {
+        justify-content: center; /* Centraliza os ícones de tecnologia */
+    }
+
+    .card-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    .social-links {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .social-links a {
+        margin-right: 0;
+    }
+
+    .submit-btn {
+        width: 100%;
+    }
 }
