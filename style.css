@@ -476,9 +476,9 @@ ESTILOS RESPONSIVOS
     }
 
     nav ul {
-        gap: 15px;
         justify-content: center;
         flex-wrap: wrap;
+        gap: 15px;
     }
 
     main {
@@ -516,9 +516,12 @@ ESTILOS RESPONSIVOS
         padding: 20px 15px;
     }
 
+    /* ALTERAÇÕES AQUI */
     nav ul {
-        flex-direction: column;
-        gap: 20px;
+        flex-direction: row; /* Mantém os itens em linha */
+        flex-wrap: wrap;       /* Permite que quebrem para a próxima linha */
+        justify-content: center; /* Centraliza os itens */
+        gap: 10px 15px;        /* Espaçamento vertical e horizontal */
     }
 
     nav a {
